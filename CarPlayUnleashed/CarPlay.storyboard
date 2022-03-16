@@ -17,26 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarPlay Unleashed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-dS-CrJ" userLabel="Counter">
-                                <rect key="frame" x="108.5" y="433.5" width="197" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" systemColor="systemYellowColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MO0-I9-inX">
+                                <rect key="frame" x="157" y="408" width="100" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-dS-CrJ" userLabel="Counter">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-Fr-sWF">
+                                        <rect key="frame" x="0.0" y="37" width="100" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="tTS-oA-wf8"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="carPlayButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ovl-7h-AHV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YA4-dS-CrJ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="F3Q-GJ-2Pv"/>
-                            <constraint firstItem="YA4-dS-CrJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="K7V-Uy-AG0"/>
-                            <constraint firstItem="YA4-dS-CrJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QHC-Gy-Vgf"/>
-                            <constraint firstItem="YA4-dS-CrJ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hQY-ZA-b4j"/>
+                            <constraint firstItem="MO0-I9-inX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="KyP-Qv-1Fg"/>
+                            <constraint firstItem="MO0-I9-inX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZmN-rA-8dL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="YA4-dS-CrJ" id="FOp-eh-38q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="47.544642857142854"/>
+            <point key="canvasLocation" x="132" y="48"/>
         </scene>
     </scenes>
     <resources>

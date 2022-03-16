@@ -9,8 +9,18 @@ import UIKit
 
 class CarPlayViewController: UIViewController {
 
+    @IBOutlet weak var counterLabel: UILabel!
+    var counter = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        counterLabel.text = String(counter)
+    }
+    
+    @IBAction func carPlayButtonTapped(_ sender: Any) {
+        print("CarPlay Button tapped")
+        counter += 1
+        counterLabel.text = String(counter)
     }
     
     /*

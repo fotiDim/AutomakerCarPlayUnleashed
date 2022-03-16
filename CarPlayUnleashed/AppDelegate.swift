@@ -9,7 +9,7 @@ import UIKit
 import CarPlay
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, CPApplicationDelegate, CPMapTemplateDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CPApplicationDelegate {
     
     var carPlayWindow: CPWindow?
     var interfaceController: CPInterfaceController?
